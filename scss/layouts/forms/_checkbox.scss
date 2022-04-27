@@ -1,0 +1,219 @@
+.custom-checkbox {
+    @include flexbox();;
+    @include justify-content(flex-start);
+    @include align-items(center);
+    position: relative;
+    margin-bottom: .6125rem;
+
+    label {
+        margin: 0;
+        font-weight: 500;
+        font-size: .775rem;
+    }
+
+    input {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+        z-index: 9;
+
+        &+label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        // Box.
+        &+label:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 18px;
+            height: 18px;
+            background: var(--white-color);
+            border: 1.5px solid var(--border-dark);
+            @include radius(4px);
+        }
+
+
+        // Box focus
+        &:focus+label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+
+        // Box checked
+        &:checked+label:before {
+            background: var(--secondary-300);
+        }
+
+        // Disabled state label.
+        &:disabled+label {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+
+        // Disabled box.
+        &:disabled+label:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+
+        // Checkmark. Could be replaced with an image
+        &:checked+label:after {
+            content: 'check';
+            position: absolute;
+            left: 2.5px;
+            top: 3px;
+            line-height: 1;
+            font-family: 'Material Icons';
+            color: var(--white-color);
+            text-transform: none;
+            font-size: $font-size-body;
+        }
+
+        &:checked+label:before {
+            border-color: var(--secondary-300);
+        }
+
+        &:checked+label {
+            color: var(--primary-color);
+        }
+    }
+
+    // &:hover{
+    //     &::before{
+    //         opacity: 1;
+    //         visibility: visible;
+    //     }
+    // }
+}
+
+.custom-radio {
+    @include flexbox();;
+    @include justify-content(flex-start);
+    @include align-items(center);
+    position: relative;
+    margin-bottom: .6125rem;
+
+    label {
+        margin: 0;
+        font-weight: 500;
+        font-size: .775rem;
+        @include flex-grow(1);
+    }
+
+    input {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+        z-index: 9;
+
+        &+label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        // Box.
+        &+label:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 18px;
+            height: 18px;
+            @include radius(50%);
+            background: var(--white-color);
+            border: 1.5px solid var(--border-dark);
+        }
+
+        // Box hover
+        // &:hover + label:before {
+        //     background: var(--blue-color);
+        // }
+
+        // Box focus
+        &:focus+label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+
+        // Box checked
+        &:checked+label:before {
+            background: var(--primary-color);
+        }
+
+        // Disabled state label.
+        &:disabled+label {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+
+        // Disabled box.
+        &:disabled+label:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+
+        // Checkmark. Could be replaced with an image
+        &:checked+label:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            @include prefix(transform, translateY(-50%), ('webkit', 'ms', 'moz', 'o'));
+            background: var(--primary-color);
+            width: 8px;
+            height: 8px;
+            @include radius(50%);
+        }
+
+        &:checked+label:before {
+            border-color: var(--white-color);
+        }
+
+        &:checked+label {
+            color: var(--primary-color);
+        }
+    }
+}
+
+
+.is-flat-radio {
+    width: 100px;
+    @include radius(20px);
+    background-color: var(--secondary-200);
+    border: 1px solid var(--border-color);
+    position: relative;
+
+    .flat-radio {
+        label {
+            margin: 0;
+            width: 50px;
+            height: 30px;
+            @include radius(20px);
+            position: relative;
+            font-weight: 500;
+            @include flexbox();;
+            @include justify-content(center);;
+            @include align-items(center);
+            @include flex-direction(column);
+        }
+    }
+
+
+
+    input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        &:checked~label {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+        }
+    }
+}

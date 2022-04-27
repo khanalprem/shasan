@@ -1,0 +1,60 @@
+.custom-progress {
+    @include flexbox();
+    @include align-items(center);
+    height: 10px;
+    @include radius(24px);
+    background-color: var(--border-color);
+
+    .progress-bar {
+        @include flexbox();
+        @include justify-content(center);
+        @include flex-direction(column);
+        color: var(--white-color);
+        text-align: center;
+        white-space: nowrap;
+        @include transition(width .6s ease);
+        height: 100%;
+        font-size: 10px;
+
+        &.is-primary {
+            background-color: var(--primary-color);
+        }
+
+        &.is-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        &.is-green {
+            background-color: var(--secondary-color);
+        }
+
+        &.is-orange {
+            background-color: var(--orange-color);
+        }
+
+        &.is-red {
+            background-color: var(--red-color);
+        }
+
+        &.is-blue {
+            background-color: var(--blue-color);
+        }
+
+        &.is-purple {
+            background-color: var(--purple-color);
+        }
+
+        &:last-child {
+            border-radius: 0 24px 24px 0;
+        }
+
+        &:first-child {
+            border-radius: 24px 0 0 24px;
+        }
+    }
+
+    &.is-md {
+        height: 20px;
+    }
+
+}

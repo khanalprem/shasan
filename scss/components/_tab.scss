@@ -1,0 +1,163 @@
+.pm-tab-content {
+    .tab-item {
+        display: none;
+        &.is-active {
+            display: block;
+        }
+    }
+}
+
+.tab-list {
+    @include flexbox();
+    @include justify-content(flex-start);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    margin: 0;
+    li {
+        a {
+            display: block;
+            text-transform: capitalize;
+            position: relative;
+            @include prefix(transition, (all .2s linear), ('webkit', 'ms', 'moz', 'o'));
+            border: 1px solid transparent;
+            cursor: pointer;
+            @include radius(30px);
+            span {
+                &.counter {
+                    padding: 0 6px;
+                    @include radius(50%);
+                    background-color: var(--secondary-200);
+                    color: var(--white-color);
+                    font-weight: 500;
+                    margin-left: .5rem;
+                }
+            }
+            .is-icon {
+                margin-right: .6125rem;
+                vertical-align: middle;
+            }
+        }
+        &:not(:last-child) {
+            margin-right: .6125rem;
+        }
+    }
+    &.is-bg {
+        li {
+            a {
+                background-color: var(--white-color);
+                padding: .35rem 1rem;
+                &.is-active,
+                &:hover {
+                    background-color: var(--primary-500);
+                    color:var(--white-color)
+                }
+            }
+        }
+    }
+    &.is-light {
+        li {
+            a {
+                background-color: transparent;
+                border: 1px solid var(--border-color);
+                padding: .25rem .6125rem;
+                &.is-active,
+                &:hover {
+                    color: var(--body-color);
+                    background-color: var(--secondary-50);
+                }
+                &.is-active {
+                    font-weight: 600;
+                    border-color: var(--secondary-300);
+                }
+            }
+        }
+    }
+    &.is-border {
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        li {
+            a {
+                padding: .25rem .5rem;
+                font-size: $font-size-body;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    left: 0;
+                    bottom: -2px;
+                    height: 2px;
+                    background-color: var(--primary-300);
+                    @include prefix(transition, (width .3s linear), ('webkit', 'ms', 'moz', 'o'));
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            a {
+                &.is-active {
+                    color: var(--body-color);
+                    font-weight: 500;
+                    &::after {
+                        width: 100%;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    color: var(--heading-color);
+                }
+            }
+        }
+    }
+    &.is-full-border {
+        li {
+            @include prefix(transition, (all .5s ease-in-out), ('webkit', 'ms', 'moz', 'o'));
+            border: 1px solid rgba(var(--white-color), .20);
+            text-align: center;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            &:hover,
+            &.is-active {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                color: var(--white-color);
+            }
+        }
+        &.is-3 {
+            li {
+                @include flex(0 0 33.33333%);
+                max-width: 33.33333%;
+            }
+        }
+        &.is-4 {
+            li {
+                @include flex(0 0 25%);
+                max-width: 25%;
+            }
+        }
+    }
+    &.is-scroll {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        position: relative;
+        li {
+            a {
+                @include trim(1);
+            }
+        }
+    }
+    &.is-radius-border{
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        @include radius(30px);
+        li{
+            @include radius(30px); 
+            a{
+                padding: .35rem .6125rem;
+            }  
+        }
+    }
+}

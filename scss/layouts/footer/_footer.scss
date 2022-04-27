@@ -1,0 +1,92 @@
+.site-footer {
+    padding: 4rem 0;
+    background-color: var(--banner-color);
+
+    .footer-logo {
+        img {
+            max-width: 250px;
+            @include breakpoint-to('md-tab') {
+                max-width: 220px;
+    
+            }
+            @include breakpoint-to('lg-tab') {
+                max-width: 250px;
+    
+            }
+        }
+        
+    }
+
+    address {
+        color: var(--body-color);
+    }
+
+    .contact-info {
+        li {
+            margin-top: .25rem;
+            color: var(--body-color);
+
+            i {
+                margin-right: .5rem;
+                color: var(--primary-300);
+                font-size: $font-size-h6;
+            }
+        }
+    }
+
+    .subscription {
+
+
+        .is-button {
+            border-radius: 0 4px 4px 0
+        }
+    }
+
+    .link-widget {
+        margin-bottom: 1.5rem;
+
+        h6 {
+            text-transform: uppercase;
+            color: var(--primary-300);
+            font-size: $font-size-body;
+        }
+
+        ul {
+            &.is-list {
+                li {
+                    padding: 0;
+                    margin-top: .45rem;
+
+                    a {
+                        color: var(--body-600);
+                        font-size: $font-size-small;
+                        font-weight: 400;
+                    }
+
+                    &:hover {
+                        a {
+                            color: var(--primary-200);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copy-right {
+        border-color: var(--bg-light);
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    padding-right: 1rem;
+                }
+
+                a {
+                    color: var(--body-600);
+                }
+            }
+        }
+    }
+}

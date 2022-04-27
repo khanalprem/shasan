@@ -1,0 +1,60 @@
+@import "./menu";
+
+header {
+
+    &.site-header {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1011;
+        padding: .6125rem 0;
+
+        .header-in {
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items(center);
+            position: relative;
+
+            .header-right {
+                @include flexbox();
+                @include justify-content(flex-end);
+                @include align-items(center);
+
+
+                .main-navigation-wrap {
+                    @include flex-grow(1);
+                    @include flexbox();
+                    @include justify-content(flex-end);
+                    @include align-items(center);
+                    padding: 0 1.5rem;
+                }
+            }
+
+
+
+        }
+
+        a.site-logo {
+            max-width: 200px;
+
+
+            @include breakpoint-to('md-tab') {
+                max-width: 280px;
+            }
+            @include breakpoint-to('lg-tab') {
+                max-width: 320px;
+            }
+        }
+
+        &.sticky {
+            z-index: 1011 !important;
+        }
+    }
+}
+
+
+

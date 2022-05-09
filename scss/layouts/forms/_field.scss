@@ -209,8 +209,9 @@ textarea {
     @include align-items(center);
     background-color: var(--white-color);
     position: relative;
-    height: calc(1.8em + 0.75rem + 2px);
+    height: calc(1.5em + 0.75rem + 2px);
     overflow: hidden;
+    @include radius(30px);
     input {
         flex-grow: 1;
         border: none;
@@ -221,7 +222,6 @@ textarea {
     span {
         &.span-group {
             padding: 0 .5rem;
-            padding-right: 0;
             text-align: center;
             @include flexbox();
             @include justify-content(center);

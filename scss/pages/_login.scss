@@ -1,0 +1,28 @@
+.login-page{
+    @include flex-direction(column);
+    padding:1rem;
+    min-height: 100vh;
+    .login-form{
+        padding:1rem;
+        &_content{
+            max-width: 500px;
+            @include box-shadow(0 10px 30px rgba(0,0,0,.2));
+            width: 100%;
+            margin:0 auto;
+            padding:2rem;
+            border-radius: 10px;
+        }
+        &_header{
+            figure{
+                margin:0 auto;
+            }
+        }
+        
+        .is-button{
+                font-weight: normal;
+                svg{
+                    max-width: 16px;
+                }
+        }
+    }
+}

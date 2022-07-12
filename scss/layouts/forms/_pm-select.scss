@@ -19,9 +19,9 @@
     border: 1px solid var(--border-color);
     // height: 2.2rem;
     // line-height: 2.2rem;
-    padding: 0.25rem 2.3rem 0.25rem 0.6125rem;
+    padding: 0.65rem 2.3rem 0.65rem 0.6125rem;
     font-weight: 400;
-    @include radius(4px);
+    @include radius(12px);
     position: relative;
     cursor: pointer;
     color: var(--gray-200);

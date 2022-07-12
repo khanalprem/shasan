@@ -308,7 +308,10 @@
                       <input class="pm-control" placeholder="search" />
                     </div>
                   </div>
-                  <button class="is-button is-clear is-filter-clear is-icon">
+                  <button
+                    class="is-button is-clear is-filter-clear is-icon"
+                    popup-link="add-category"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="21.313"
@@ -326,6 +329,96 @@
 
                     <span>Category</span>
                   </button>
+                </div>
+                <div class="popup" id="add-category">
+                  <di class="popup-container sm-popup">
+                    <div class="popup-body">
+                      <span class="close-icon is-border">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="13.793"
+                          height="13.793"
+                          viewBox="0 0 13.793 13.793"
+                        >
+                          <path
+                            d="M1.525-8.25,6.854-2.922a.313.313,0,0,1,0,.473l-.988.988a.313.313,0,0,1-.473,0l-.9-.945L.064-6.789-5.264-1.461a.313.313,0,0,1-.473,0l-.988-.988a.313.313,0,0,1,0-.473L-1.4-8.25l-5.328-5.328a.313.313,0,0,1,0-.473l.988-.988a.313.313,0,0,1,.473,0L.064-9.711l5.328-5.328a.313.313,0,0,1,.473,0l.988.988a.313.313,0,0,1,0,.473l-.945.9Z"
+                            transform="translate(6.832 15.146)"
+                            fill=""
+                          ></path>
+                        </svg>
+                      </span>
+                      <div class="popup-header">
+                        <h5>Add category</h5>
+                      </div>
+                      <div class="popup-content">
+                        <div class="pm-group">
+                          <label>Category</label>
+                          <div class="pm-select mr-05">
+                            <div class="selected-item">
+                              <span>add category</span>
+                            </div>
+                            <ul class="select-list left-dropdown">
+                              <li>User</li>
+                              <li>Gandaki</li>
+                              <li>Lumbini</li>
+                              <li>Gandaki</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="pm-group">
+                          <label class="mb-15 is-block">color</label>
+                          <div class="is-flex is-start is-align-center">
+                            <div class="pm-select mr-05 ml-05 is-inline-flex">
+                              <div class="selected-item">
+                                <span
+                                  class="is-color"
+                                  style="background-color: #f4bb51"
+                                ></span>
+                              </div>
+                              <ul class="select-list left-dropdown">
+                                <li>
+                                  <span
+                                    class="is-color"
+                                    style="background-color: #f4bb51"
+                                  ></span>
+                                </li>
+                                <li>
+                                  <span
+                                    class="is-color"
+                                    style="background-color: #f4bb51"
+                                  ></span>
+                                </li>
+                                <li>
+                                  <span
+                                    class="is-color"
+                                    style="background-color: #f4bb51"
+                                  ></span>
+                                </li>
+                                <li>
+                                  <span
+                                    class="is-color"
+                                    style="background-color: #f4bb51"
+                                  ></span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="pm-group">
+                          <label>icon</label>
+                          <div class="attached">
+                            <input type="file" id="upload" />
+                            <label for="upload" class="upload-text"
+                              >Upload</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup-footer">
+                        <button class="is-button is-bg">Add</button>
+                      </div>
+                    </div>
+                  </di>
                 </div>
               </div>
             </div>

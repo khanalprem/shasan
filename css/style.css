@@ -7727,7 +7727,7 @@ a:not([href]) {
   font-size: 0.875rem;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 0.5rem 1rem;
+  padding: 0.6125rem 1rem;
   position: relative;
   display: -webkit-box;
   display: -moz-box;
@@ -7753,10 +7753,10 @@ a:not([href]) {
   user-select: none;
   overflow: hidden;
   vertical-align: middle;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -8175,17 +8175,17 @@ input.pm-control,
 textarea.pm-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(2.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-weight: 400;
   line-height: 1.5;
   background-color: transparent;
   background-clip: padding-box;
   border: 1px solid var(--border-color);
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
 }
 input.pm-control.placeholder,
 textarea.pm-control.placeholder {
@@ -8317,10 +8317,10 @@ textarea.pm-control {
   position: relative;
   height: calc(1.5em + 0.75rem + 2px);
   overflow: hidden;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
 }
 .custom-input-group input {
   flex-grow: 1;
@@ -8714,14 +8714,14 @@ textarea.pm-control {
   background-color: var(--bg-color);
   flex-grow: 1;
   max-width: 240px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
 }
 .search-bar .search-wrap input.pm-control {
   flex-grow: 1;
-  height: calc(1rem + .75rem + 2px);
+  height: calc(1.7rem + .75rem + 2px);
   border: none;
   display: initial;
   background-color: var(--bg-color);
@@ -9294,12 +9294,12 @@ ul.social-list.is-end {
   width: 100%;
   position: relative;
   border: 1px solid var(--border-color);
-  padding: 0.25rem 2.3rem 0.25rem 0.6125rem;
+  padding: 0.65rem 2.3rem 0.65rem 0.6125rem;
   font-weight: 400;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   position: relative;
   cursor: pointer;
   color: var(--gray-200);
@@ -11817,6 +11817,7 @@ table thead th {
   flex-shrink: 0;
   background-color: var(--bg-color);
   position: relative;
+  border-radius: 20px;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   -moz-transform: scale(0);

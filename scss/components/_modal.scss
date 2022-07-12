@@ -26,6 +26,7 @@
         flex-shrink: 0;
         background-color: var(--bg-color);
         position: relative;
+        border-radius: 20px;
         @include prefix(transform, scale(0), ('webkit', 'ms', 'moz', 'o'));
         @include prefix(transition, all .9s ease-in-out, ('webkit', 'moz', 'ms', 'o'));
         @include breakpoint-to('mmd-phone') {

@@ -10,11 +10,11 @@
         background-color: var(--bg-color);
         flex-grow: 1;
         max-width: 240px;
-        @include radius(30px);
+        @include radius(12px);
         input {
             &.pm-control {
                 flex-grow: 1;
-                height: calc(1rem + .75rem + 2px);
+                height: calc(1.7rem + .75rem + 2px);
                 border: none;
                 display: initial;
                 background-color: var(--bg-color);

@@ -4,7 +4,7 @@
   font-size: $font-size-button;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 0.5rem 1rem;
+  padding: 0.6125rem 1rem;
   position: relative;
   @include flexbox();
   @include justify-content(center);
@@ -15,7 +15,7 @@
   @include user-select(none);
   overflow: hidden;
   vertical-align: middle;
-  @include radius(4px);
+  @include radius(8px);
   cursor: pointer;
   @include prefix(
     transition,

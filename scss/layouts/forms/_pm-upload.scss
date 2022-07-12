@@ -98,6 +98,20 @@
         @include radius(5px);
         max-width: 400px;
     }
+    &.is-clear{
+        background-color: transparent;
+        @include justify-content(start);
+        padding:0;
+        figure{
+            background-color: transparent;
+        }
+        .is-remove{
+            display: inline-flex;
+            color:var(--primary-500);
+            cursor: pointer;
+            
+        }
+    }
 }
 
 .attached {
@@ -117,6 +131,9 @@
         bottom: 0;
         opacity: 0;
         z-index: 99;
+    }
+    .upload-text{
+        color:var(--primary-500)
     }
 }
 

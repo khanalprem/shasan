@@ -48,6 +48,7 @@
   &.is-full-line {
     width: 100%;
   }
+  
   &.is-border {
     background-color: var(--white-color);
     color: var(--body-600);
@@ -222,3 +223,4 @@
     @include justify-content(flex-start);
   }
 }
+

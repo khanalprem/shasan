@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2948" data-name="Rectangle 2948" width="40" height="40" transform="translate(664 1905)" fill="#9e9e9e"/>
+    </clipPath>
+  </defs>
+  <g id="upload-icon" transform="translate(-664 -1905)" clip-path="url(#clip-path)">
+    <text id="_" data-name="" transform="translate(684 1936)" fill="#9e9e9e" font-size="28" font-family="FontAwesome5Pro-Light, 'Font Awesome \35  Pro'" font-weight="300"><tspan x="-13.563" y="0"></tspan></text>
+  </g>
+</svg>
